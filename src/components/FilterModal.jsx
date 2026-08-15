@@ -9,13 +9,13 @@ import equipment from '../assets/equipment.jpg';
 import collegeFestival from '../assets/festival.jpeg';
 import govImage from '../assets/Government_event.jpg';
 import nicCamp from '../assets/pre_republic_event.jpg';
-import brand from '../assets/college_festival.jpg';
+import brand from '../assets/college_festival.JPG';
 
 import behThe from '../assets/behind_the_scene_1.mp4';
 import ganga from '../assets/ganga1.mp4';
 import gangaSagar from '../assets/gangasagar_1.mp4';
 import kiff from '../assets/KIFF_2K25_Sample_video_0.1_1.mp4';
-import ganga1 from '../assets/ganga1.png';
+import ganga1 from '../assets/Ganga1.png';
 import kolkataFair from '../assets/kolkata_fair.jpg';
 import beh from '../assets/behind.jpg';
 import droneVideo from '../assets/drone_video.mp4';
