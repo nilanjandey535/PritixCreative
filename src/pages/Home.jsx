@@ -136,16 +136,6 @@ export default function Home() {
           <Hero />
         </section>
 
-        {/* Section 2: STATS — Key Achievements */}
-        <section id="stats">
-          <StatsSection />
-        </section>
-
-        {/* Section 3: CLIENT STORIES — Testimonials */}
-        <section id="stories">
-          <ClientTestimonials />
-        </section>
-
         {/* Section 4: WHAT WE CREATE — Cinematic Panels */}
         <section id="work">
           <WhatWeCreate />
@@ -154,6 +144,16 @@ export default function Home() {
         {/* Section 5: MEET THE CREATORS — Behind Every Great Story */}
         <section id="team">
           <MeetTheCreators />
+        </section>
+
+        {/* Section 2: STATS — Key Achievements */}
+        <section id="stats">
+          <StatsSection />
+        </section>
+
+        {/* Section 3: CLIENT STORIES — Testimonials */}
+        <section id="stories">
+          <ClientTestimonials />
         </section>
 
         {/* Section 6: FINAL CTA — Cinematic Sunset Drone */}

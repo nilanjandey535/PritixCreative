@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import FilterModal from './FilterModal.jsx';
 
-import heroImg from '../assets/other.jpeg';
-import festival from '../assets/festival.jpg';
-import video from '../assets/brand.jpeg';
+import heroImg from '../assets/brand.jpeg';
+import festival from '../assets/equipment.jpg';
+import video from '../assets/other.jpeg';
 import brand from '../assets/brand.jpg';
 
 const LABEL_FROM_ID = {

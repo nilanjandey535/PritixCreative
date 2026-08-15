@@ -4,9 +4,9 @@ import logo from '../assets/logo_1.png';
 
 const HOME_NAV = [
   { id: 'hero', label: 'Home' },
-  { id: 'stories', label: 'Stories' },
   { id: 'work', label: 'Work' },
   { id: 'team', label: 'Team' },
+  { id: 'stories', label: 'Stories' },
 ];
 
 const HEADER_OFFSET = 72;
@@ -70,11 +70,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
-          scrolled
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${scrolled
             ? 'backdrop-blur-2xl bg-inverse-surface/60 shadow-[0_1px_0_0_rgba(166,107,255,0.12)] border-b border-white/[0.05]'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <div className="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-3 md:py-4 w-full max-w-container-max mx-auto">
           <Link
@@ -107,11 +106,10 @@ export default function Navbar() {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={(e) => handleSectionClick(e, item.id)}
-                  className={`inline-flex items-center px-5 py-2.5 rounded-full font-sans-premium text-xs uppercase tracking-[0.2em] border transition-all duration-500 ${
-                    isActive
+                  className={`inline-flex items-center px-5 py-2.5 rounded-full font-sans-premium text-xs uppercase tracking-[0.2em] border transition-all duration-500 ${isActive
                       ? 'text-white bg-primary/90 border-white/5 shadow-[0_0_30px_rgba(95,46,255,0.4)]'
                       : 'text-white/80 bg-white/[0.03] border-white/10 backdrop-blur-md hover:text-white hover:bg-white/[0.06] hover:border-white/20 hover:shadow-[0_0_20px_rgba(95,46,255,0.15)]'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </a>
@@ -143,9 +141,8 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-0 h-screen w-screen bg-inverse-surface/97 backdrop-blur-2xl z-[45] transition-transform duration-400 ease-in-out md:hidden flex flex-col justify-center items-center gap-6 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed inset-0 h-screen w-screen bg-inverse-surface/97 backdrop-blur-2xl z-[45] transition-transform duration-400 ease-in-out md:hidden flex flex-col justify-center items-center gap-6 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <nav className="flex flex-col items-center gap-6">
           {HOME_NAV.map((item) => {
@@ -156,9 +153,8 @@ export default function Navbar() {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => handleSectionClick(e, item.id)}
-                className={`font-display text-3xl tracking-tight transition-all duration-400 ${
-                  isActive ? 'text-white drop-shadow-[0_0_20px_rgba(95,46,255,0.45)]' : 'text-white/75 hover:text-white'
-                }`}
+                className={`font-display text-3xl tracking-tight transition-all duration-400 ${isActive ? 'text-white drop-shadow-[0_0_20px_rgba(95,46,255,0.45)]' : 'text-white/75 hover:text-white'
+                  }`}
               >
                 {item.label}
               </a>

@@ -10,6 +10,10 @@ import collegeFestival from '../assets/festival.jpeg';
 import govImage from '../assets/Government_event.jpg';
 import nicCamp from '../assets/pre_republic_event.jpg';
 import brand from '../assets/college_festival.JPG';
+import drone from '../assets/drone.jpg';
+import edit from '../assets/edited_video.jpg';
+import rmk1 from '../assets/rmk_img.jpg';
+import final1 from '../assets/final.jpg';
 
 import behThe from '../assets/behind_the_scene_1.mp4';
 import ganga from '../assets/ganga1.mp4';
@@ -29,6 +33,9 @@ import nic from '../assets/NIC.jpg';
 import rmk from '../assets/RMK.mp4';
 import final from '../assets/final_ch.mp4';
 import secPoster from '../assets/second_poster.jpeg';
+import gangasagarThumb from '../assets/gangasagar.jpg';
+import videoThumb from '../assets/video.jpg';
+import otherThumb from '../assets/other.jpeg';
 
 const LABEL_FROM_ID = {
   photography: 'Photography',
@@ -48,23 +55,21 @@ const GALLERY = {
     { type: 'image', src: collegeFestival, label: 'Brand Film' },
   ],
   'social-media': [
-    //{ type: 'video', src: gangaSagar, poster: gangaSagar1, label: 'Ganga Sagar Festival2' },
     { type: 'video', src: ganga, poster: ganga1, label: 'Ganga Festival' },
-    { type: 'video', src: droneVideo, label: 'Drone Video' },
-    { type: 'video', src: konika, label: 'Edited Video' },
+    { type: 'video', src: droneVideo, poster: drone, label: 'Drone Video' },
+    { type: 'video', src: konika, poster: edit, label: 'Edited Video' },
     { type: 'video', src: behThe, poster: beh, label: 'Behind the Scene' },
     { type: 'video', src: kiff, poster: kolkataFair, label: 'Kolkata Fair Festival' },
   ],
   'brand-design': [
-    { type: 'video', src: gangaSagar, label: 'Ganga Sagar Festival' },
-    { type: 'video', src: promotional, label: 'Brand Film' },
+    { type: 'video', src: gangaSagar, poster: gangasagarThumb, label: 'Ganga Sagar Festival' },
+    { type: 'video', src: promotional, poster: videoThumb, label: 'Brand Film' },
     { type: 'instagram', src: kalika, url: 'https://www.instagram.com/reel/DbLZHhDSpS2/?igsh=ZnJzc2k0M2d3cWxq', label: 'Kalika Jewellers' },
-    { type: 'video', src: rmk, label: 'Promtional Video' },
+    { type: 'video', src: rmk, poster: rmk1, label: 'Promtional Video' },
     { type: 'instagram', url: 'https://www.instagram.com/reel/DblLo1Zzrpo/?igsh=MW8wbnQ0YnJueGk1dg==', label: 'Dentist Reaction' },
-    { type: 'video', src: nicCamp1, label: 'NIC Camp 2026' },
+    { type: 'video', src: nicCamp1, poster: nic, label: 'NIC Camp 2026' },
     { type: 'instagram', url: 'https://www.instagram.com/reel/DbS9hmhyU9R/?igsh=MXc1ZGFxcW5qdTJqbg==', label: 'Jewellery Promotional Design' },
-    { type: 'video', src: final, label: 'Promotional Video' },
-    //{ type: 'facebook', url: 'https://www.facebook.com/share/r/1P5pQb27HD/', label: 'Promotional Poster Design' },
+    { type: 'video', src: final, poster: final1, label: 'Promotional Video' },
   ],
   other: [
     { type: 'youtube', url: 'https://youtu.be/Zq5oyEWFwrU?si=o_eSzJ9hu5TPxhdq', label: 'Podcast' },
@@ -713,6 +718,25 @@ export default function FilterModal({ filterId, onClose }) {
                         {media.type === 'video' ? (
                           (() => {
                             const muted = muteStates[vKey] !== false;
+                            if (!isActive) {
+                              return (
+                                <div className="relative w-full h-full overflow-hidden bg-black/70 cursor-pointer">
+                                  <img
+                                    src={media.poster}
+                                    alt={media.label}
+                                    loading="lazy"
+                                    className="w-full h-full object-cover bg-black/60 opacity-60 filter blur-[1px]"
+                                  />
+                                  <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+                                    <div className="flex items-center justify-center rounded-full transition-all duration-400 bg-inverse-surface/40 border border-white/10 w-16 h-16 md:w-20 md:h-20 shadow-[0_0_30px_rgba(95,46,255,0.12)]">
+                                      <span className="material-symbols-outlined text-[32px] md:text-[38px] text-white">
+                                        play_arrow
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
                             return (
                               <video
                                 ref={(el) => setVideoRef(vKey, el)}
@@ -721,6 +745,7 @@ export default function FilterModal({ filterId, onClose }) {
                                 muted={muted}
                                 loop
                                 playsInline
+                                autoPlay
                                 preload="metadata"
                                 volume={1}
                                 onPlay={() => {

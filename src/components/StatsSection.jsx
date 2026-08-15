@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const STATS = [
-  { value: 35, suffix: '+',  label: 'Projects Covered', accent: 'text-primary', },
-  { value: 22, suffix: '+',  label: 'Events Covered', accent: 'text-white', },
+  { value: 35, suffix: '+', label: 'Projects Covered', accent: 'text-primary', },
+  { value: 22, suffix: '+', label: 'Events Covered', accent: 'text-white', },
   { value: 15, suffix: '+', label: 'Brand Marketing', accent: 'text-gold-accent', },
-  { value: 5,   suffix: '+',   label: 'Government Collaborations', accent: 'text-primary-fixed-dim', special: true },
+  { value: 5, suffix: '+', label: 'Government Collaborations', accent: 'text-primary-fixed-dim', special: true },
 ];
 
 function useCountUp(target, opts = {}) {
@@ -42,19 +42,19 @@ function StatTile({ stat, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-20px' }}
       transition={{ delay: index * 0.08, duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="relative flex flex-col items-center md:items-start gap-stack-xs md:gap-stack-sm p-stack-sm md:p-stack-md rounded-[16px] bg-surface-container-highest/40 border border-white/[0.06] hover:border-primary/25 hover:bg-surface-container-highest/70 backdrop-blur transition-all duration-600 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(95,46,255,0.18)]"
+      className="relative flex flex-col items-center md:items-start gap-3 md:gap-2.5 p-4 pt-8 pb-5 md:p-5 rounded-[16px] bg-surface-container-highest/40 border border-white/[0.06] hover:border-primary/25 hover:bg-surface-container-highest/70 backdrop-blur transition-all duration-600 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(95,46,255,0.18)]"
     >
       <div className="flex items-baseline gap-1">
-        <span className={`font-display text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-tight ${stat.accent}`}>
+        <span className={`font-display text-[clamp(2.15rem,3.6vw,3.2rem)] leading-none tracking-tight ${stat.accent}`}>
           {displayNum}
           <span className="tabular-nums">{stat.suffix}</span>
         </span>
       </div>
-      <span className="font-sans-premium text-[10px] md:text-label-sm uppercase tracking-[0.24em] text-on-surface-variant/80 max-w-[16ch] md:text-left text-center">
+      <span className="font-sans-premium text-[10px] md:text-label-sm uppercase tracking-[0.18em] md:tracking-[0.24em] text-on-surface-variant/80 max-w-[16ch] md:text-left text-center">
         {stat.label}
       </span>
       {stat.special && (
-        <span className="absolute top-stack-xs right-stack-xs inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary-fixed-dim text-[9px] uppercase tracking-[0.2em]">
+        <span className="absolute top-2 right-2 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary-fixed-dim text-[9px] uppercase tracking-[0.2em]">
           <span className="w-1 h-1 rounded-full bg-primary animate-pulse" />
           Multiple
         </span>
