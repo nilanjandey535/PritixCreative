@@ -4,9 +4,10 @@ import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 import Hero from '../components/Hero.jsx';
 import WhatWeCreate from '../components/WhatWeCreate.jsx';
-import MeetTheCreators from '../components/MeetTheCreators.jsx';
+//import MeetTheCreators from '../components/MeetTheCreators.jsx';
 import ClientTestimonials from '../components/ClientTestimonials.jsx';
 import StatsSection from '../components/StatsSection.jsx';
+import WhatWeDo from '../components/WhatWeDo.jsx';
 
 import natureBg from '../assets/nature.jpg';
 
@@ -136,15 +137,20 @@ export default function Home() {
           <Hero />
         </section>
 
+        {/* Section 1.5: WHAT WE DO — Core Capabilities */}
+        <section id="services">
+          <WhatWeDo />
+        </section>
+
         {/* Section 4: WHAT WE CREATE — Cinematic Panels */}
         <section id="work">
           <WhatWeCreate />
         </section>
 
         {/* Section 5: MEET THE CREATORS — Behind Every Great Story */}
-        <section id="team">
+        {/* <section id="team">
           <MeetTheCreators />
-        </section>
+        </section> */}
 
         {/* Section 2: STATS — Key Achievements */}
         <section id="stats">
@@ -179,19 +185,22 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/12 bg-inverse-surface/60 backdrop-blur-md mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="font-sans-premium text-[9px] uppercase tracking-[0.3em] text-primary-fixed-dim">
-                Let&apos;s Create Something Worth Remembering.
+                Why Pritix?
               </span>
             </div>
 
             {/* Heading */}
             <h2 className="font-display text-[24px] md:text-[36px] text-white leading-[1.08] tracking-tight mb-2">
-              Your Story Could Be{' '}
-              <span className="italic text-gradient-purple">Next.</span>
+              We Don't Just Make Content <br />
+              {' '}
+              <span className="italic text-gradient-purple">We Build Perception.</span>
             </h2>
 
             {/* Paragraph */}
             <p className="font-sans-premium text-base md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-4 leading-relaxed">
-              Whether you&apos;re launching a brand, organizing an event or creating meaningful content, we&apos;d love to help bring your vision to life.
+              Because your audience does&apos;t see your hard work first.
+              They see your brand.
+              That&apos;s why we focus on every detail - from the first visual to the final impression.
             </p>
 
             {/* Buttons */}

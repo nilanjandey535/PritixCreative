@@ -34,8 +34,8 @@ import logo from '../assets/logo_1.png';
 
 const HOME_NAV = [
   { id: 'hero', label: 'Home' },
+  { id: 'services', label: 'Services' },
   { id: 'work', label: 'Work' },
-  { id: 'team', label: 'Team' },
   { id: 'stories', label: 'Stories' },
 ];
 

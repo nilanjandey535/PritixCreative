@@ -4,8 +4,8 @@ import logo from '../assets/logo_1.png';
 
 const HOME_NAV = [
   { id: 'hero', label: 'Home' },
+  { id: 'services', label: 'Services' },
   { id: 'work', label: 'Work' },
-  { id: 'team', label: 'Team' },
   { id: 'stories', label: 'Stories' },
 ];
 
@@ -71,8 +71,8 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${scrolled
-            ? 'backdrop-blur-2xl bg-inverse-surface/60 shadow-[0_1px_0_0_rgba(166,107,255,0.12)] border-b border-white/[0.05]'
-            : 'bg-transparent'
+          ? 'backdrop-blur-2xl bg-inverse-surface/60 shadow-[0_1px_0_0_rgba(166,107,255,0.12)] border-b border-white/[0.05]'
+          : 'bg-transparent'
           }`}
       >
         <div className="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-3 md:py-4 w-full max-w-container-max mx-auto">
@@ -89,7 +89,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Pritix"
-              className="h-7 md:h-11 w-auto object-contain drop-shadow-[0_0_25px_rgba(95,46,255,0.35)] transition-all duration-500 group-hover:scale-105"
+              className="h-5 md:h-7 w-auto object-contain drop-shadow-[0_0_25px_rgba(95,46,255,0.35)] transition-all duration-500 group-hover:scale-105"
             />
             <span className="text-[1.15rem] leading-none md:text-[1.85rem] font-bold tracking-tight text-white select-none whitespace-nowrap">
               Pritix Creative
@@ -107,8 +107,8 @@ export default function Navbar() {
                   href={`#${item.id}`}
                   onClick={(e) => handleSectionClick(e, item.id)}
                   className={`inline-flex items-center px-5 py-2.5 rounded-full font-sans-premium text-xs uppercase tracking-[0.2em] border transition-all duration-500 ${isActive
-                      ? 'text-white bg-primary/90 border-white/5 shadow-[0_0_30px_rgba(95,46,255,0.4)]'
-                      : 'text-white/80 bg-white/[0.03] border-white/10 backdrop-blur-md hover:text-white hover:bg-white/[0.06] hover:border-white/20 hover:shadow-[0_0_20px_rgba(95,46,255,0.15)]'
+                    ? 'text-white bg-primary/90 border-white/5 shadow-[0_0_30px_rgba(95,46,255,0.4)]'
+                    : 'text-white/80 bg-white/[0.03] border-white/10 backdrop-blur-md hover:text-white hover:bg-white/[0.06] hover:border-white/20 hover:shadow-[0_0_20px_rgba(95,46,255,0.15)]'
                     }`}
                 >
                   {item.label}

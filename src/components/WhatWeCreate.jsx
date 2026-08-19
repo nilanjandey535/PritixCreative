@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import FilterModal from './FilterModal.jsx';
 
 import heroImg from '../assets/brand.jpeg';
-import festival from '../assets/equipment.jpg';
+import festival from '../assets/photo.jpeg';
 import video from '../assets/other.jpeg';
 import brand from '../assets/brand.jpg';
 

@@ -5,15 +5,19 @@ import { useNavigate } from 'react-router-dom';
 //import heroImg from '../assets/hero.png
 
 import corporateImage from '../assets/corporate_event.jpg';
-import equipment from '../assets/equipment.jpg';
+//import equipment from '../assets/equipment.jpg';
 import collegeFestival from '../assets/festival.jpeg';
 import govImage from '../assets/Government_event.jpg';
 import nicCamp from '../assets/pre_republic_event.jpg';
-import brand from '../assets/college_festival.JPG';
-import drone from '../assets/drone.jpg';
+import brand from '../assets/dance.JPG';
+import s2 from '../assets/s2.jpg';
+import s3 from '../assets/s3.mp4';
+import collegefest from '../assets/college_festival.JPG';
+//import drone from '../assets/drone.jpg';
 import edit from '../assets/edited_video.jpg';
 import rmk1 from '../assets/rmk_img.jpg';
 import final1 from '../assets/final.jpg';
+import promotion from '../assets/promotion.jpg';
 
 import behThe from '../assets/behind_the_scene_1.mp4';
 import ganga from '../assets/ganga1.mp4';
@@ -22,20 +26,22 @@ import kiff from '../assets/KIFF_2K25_Sample_video_0.1_1.mp4';
 import ganga1 from '../assets/Ganga1.png';
 import kolkataFair from '../assets/kolkata_fair.jpg';
 import beh from '../assets/behind.jpg';
-import droneVideo from '../assets/drone_video.mp4';
+//import droneVideo from '../assets/drone_video.mp4';
 import konika from '../assets/konika.mp4';
 import promotional from '../assets/promotional.mp4';
 import nicCamp1 from '../assets/NIC_camp.mp4';
 import kalika from '../assets/kalika.jpg';
 import poster from '../assets/poster.jpg';
-import gym from '../assets/gym.mp4';
+//import gym from '../assets/gym.mp4';
 import nic from '../assets/NIC.jpg';
 import rmk from '../assets/RMK.mp4';
 import final from '../assets/final_ch.mp4';
 import secPoster from '../assets/second_poster.jpeg';
 import gangasagarThumb from '../assets/gangasagar.jpg';
-import videoThumb from '../assets/video.jpg';
-import otherThumb from '../assets/other.jpeg';
+import food from '../assets/food.jpeg';
+import food1 from '../assets/food1.jpeg';
+//import videoThumb from '../assets/video.jpg';
+//import otherThumb from '../assets/other.jpeg';
 
 const LABEL_FROM_ID = {
   photography: 'Photography',
@@ -48,34 +54,37 @@ const GALLERY = {
   photography: [
     { type: 'image', src: govImage, label: 'Government Event' },
     { type: 'image', src: corporateImage, label: 'Corporate Event' },
-    { type: 'image', src: equipment, label: 'Equipment' },
+    { type: 'image', src: collegefest, label: 'College Fest' },
     { type: 'image', src: brand, label: 'College Festival' },
     { type: 'image', src: nicCamp, label: 'Republic Day Film' },
     { type: 'image', src: nic, label: 'NIC Camp 2026' },
-    { type: 'image', src: collegeFestival, label: 'Brand Film' },
+    { type: 'image', src: collegeFestival, label: 'College Event' },
   ],
   'social-media': [
     { type: 'video', src: ganga, poster: ganga1, label: 'Ganga Festival' },
-    { type: 'video', src: droneVideo, poster: drone, label: 'Drone Video' },
+    //{ type: 'video', src: droneVideo, poster: drone, label: 'Drone Video' },
     { type: 'video', src: konika, poster: edit, label: 'Edited Video' },
     { type: 'video', src: behThe, poster: beh, label: 'Behind the Scene' },
     { type: 'video', src: kiff, poster: kolkataFair, label: 'Kolkata Fair Festival' },
   ],
   'brand-design': [
     { type: 'video', src: gangaSagar, poster: gangasagarThumb, label: 'Ganga Sagar Festival' },
-    { type: 'video', src: promotional, poster: videoThumb, label: 'Brand Film' },
+    { type: 'video', src: promotional, poster: promotion, label: 'Brand Film' },
     { type: 'instagram', src: kalika, url: 'https://www.instagram.com/reel/DbLZHhDSpS2/?igsh=ZnJzc2k0M2d3cWxq', label: 'Kalika Jewellers' },
     { type: 'video', src: rmk, poster: rmk1, label: 'Promtional Video' },
     { type: 'instagram', url: 'https://www.instagram.com/reel/DblLo1Zzrpo/?igsh=MW8wbnQ0YnJueGk1dg==', label: 'Dentist Reaction' },
     { type: 'video', src: nicCamp1, poster: nic, label: 'NIC Camp 2026' },
+    { type: 'video', src: s3, poster: s2, label: 'Salon Video' },
     { type: 'instagram', url: 'https://www.instagram.com/reel/DbS9hmhyU9R/?igsh=MXc1ZGFxcW5qdTJqbg==', label: 'Jewellery Promotional Design' },
     { type: 'video', src: final, poster: final1, label: 'Promotional Video' },
   ],
   other: [
     { type: 'youtube', url: 'https://youtu.be/Zq5oyEWFwrU?si=o_eSzJ9hu5TPxhdq', label: 'Podcast' },
+    { type: 'image', src: food, label: 'Promotional Poster Design' },
     { type: 'youtube', url: 'https://youtu.be/7xLcgYeHp0g?si=OdyTCEd1bbFbPQht', label: 'Life Documentory' },
     { type: 'image', src: poster, label: 'Promotional Poster Design' },
     { type: 'instagram', url: 'https://www.instagram.com/reel/DbGGalZz0cF/?igsh=MW5jdXpzNGZ2ZWpvaQ==', label: 'Reels' },
+    { type: 'image', src: food1, label: 'Hotel Promotion' },
     { type: 'instagram', url: 'https://www.instagram.com/reel/DYPdQq_Ppzo/?utm_source=ig_web_button_share_sheet', label: 'Instagram Reel' },
     { type: 'image', src: secPoster, label: 'Promotional Poster Design' },
   ],
@@ -117,17 +126,17 @@ const getFacebookVideoId = (url = '') => {
   return null;
 };
 
-const getTikTokId = (url = '') => {
-  if (!url) return null;
-  const m = url.match(/tiktok\.com\/@[^/?#]+\/video\/(\d+)/) || url.match(/vm\.tiktok\.com\/([^/?#]+)/);
-  return m ? m[1] : null;
-};
+// const getTikTokId = (url = '') => {
+//   if (!url) return null;
+//   const m = url.match(/tiktok\.com\/@[^/?#]+\/video\/(\d+)/) || url.match(/vm\.tiktok\.com\/([^/?#]+)/);
+//   return m ? m[1] : null;
+// };
 
-const getVimeoId = (url = '') => {
-  if (!url) return null;
-  const m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-  return m ? m[1] : null;
-};
+// const getVimeoId = (url = '') => {
+//   if (!url) return null;
+//   const m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+//   return m ? m[1] : null;
+// };
 
 const getSocialHost = (url = '') => {
   try {
@@ -149,9 +158,9 @@ const SOCIAL_META = {
   youtube: { label: 'YouTube', color: 'bg-red-600/95', border: 'border-red-400/40', fill: 'fill-red-500', shadow: 'shadow-[0_0_25px_rgba(255,0,0,0.35)]' },
   instagram: { label: 'Instagram', color: 'bg-pink-600/95', border: 'border-pink-400/40', fill: 'fill-pink-500', shadow: 'shadow-[0_0_25px_rgba(236,72,153,0.35)]' },
   facebook: { label: 'Facebook', color: 'bg-blue-600/95', border: 'border-blue-400/40', fill: 'fill-blue-500', shadow: 'shadow-[0_0_25px_rgba(59,130,246,0.35)]' },
-  tiktok: { label: 'TikTok', color: 'bg-black/95', border: 'border-white/30', fill: 'fill-black', shadow: 'shadow-[0_0_25px_rgba(0,0,0,0.55)]' },
-  twitter: { label: 'X', color: 'bg-black/95', border: 'border-white/30', fill: 'fill-black', shadow: 'shadow-[0_0_25px_rgba(0,0,0,0.55)]' },
-  vimeo: { label: 'Vimeo', color: 'bg-sky-600/95', border: 'border-sky-400/40', fill: 'fill-sky-500', shadow: 'shadow-[0_0_25px_rgba(14,165,233,0.35)]' },
+  //tiktok: { label: 'TikTok', color: 'bg-black/95', border: 'border-white/30', fill: 'fill-black', shadow: 'shadow-[0_0_25px_rgba(0,0,0,0.55)]' },
+  //twitter: { label: 'X', color: 'bg-black/95', border: 'border-white/30', fill: 'fill-black', shadow: 'shadow-[0_0_25px_rgba(0,0,0,0.55)]' },
+  //vimeo: { label: 'Vimeo', color: 'bg-sky-600/95', border: 'border-sky-400/40', fill: 'fill-sky-500', shadow: 'shadow-[0_0_25px_rgba(14,165,233,0.35)]' },
   generic: { label: 'Video', color: 'bg-primary/95', border: 'border-primary/40', fill: 'fill-primary', shadow: 'shadow-[0_0_25px_rgba(95,46,255,0.35)]' },
 };
 
@@ -193,20 +202,20 @@ const getEmbedUrl = (url = '') => {
       `&t=0`
     );
   }
-  if (host === 'tiktok') {
-    const id = getTikTokId(url);
-    if (!id) return '';
-    return `https://www.tiktok.com/embed/v2/${id}?autoplay=1&muted=1`;
-  }
-  if (host === 'twitter') {
-    const encoded = encodeURIComponent(url);
-    return `https://twitframe.com/show?url=${encoded}`;
-  }
-  if (host === 'vimeo') {
-    const id = getVimeoId(url);
-    if (!id) return '';
-    return `https://player.vimeo.com/video/${id}?autoplay=1&muted=1&title=0&byline=0&portrait=0&playsinline=1&transparent=1`;
-  }
+  // if (host === 'tiktok') {
+  //   const id = getTikTokId(url);
+  //   if (!id) return '';
+  //   return `https://www.tiktok.com/embed/v2/${id}?autoplay=1&muted=1`;
+  // }
+  // if (host === 'twitter') {
+  //   const encoded = encodeURIComponent(url);
+  //   return `https://twitframe.com/show?url=${encoded}`;
+  // }
+  // if (host === 'vimeo') {
+  //   const id = getVimeoId(url);
+  //   if (!id) return '';
+  //   return `https://player.vimeo.com/video/${id}?autoplay=1&muted=1&title=0&byline=0&portrait=0&playsinline=1&transparent=1`;
+  // }
   return '';
 };
 
@@ -602,9 +611,6 @@ export default function FilterModal({ filterId, onClose }) {
       const muted = !wasMuted;
       if (host === 'youtube') {
         ytSendCommand(key, muted ? 'mute' : 'unMute');
-      } else if (host === 'instagram' || host === 'facebook') {
-        ytStartTimeRef.current[key] = Date.now();
-        ytActivationKeys.current[key] = (ytActivationKeys.current[key] ?? 0) + 1;
       }
       return { ...prev, [key]: muted };
     });
@@ -795,7 +801,7 @@ export default function FilterModal({ filterId, onClose }) {
                                   `https://www.instagram.com/p/${id}/embed/` +
                                   `?cr=1&v=14&w=720` +
                                   `&autoplay=1` +
-                                  `&muted=${muted ? 1 : 0}` +
+                                  `&muted=1` +
                                   `&controls=0` +
                                   `&omitscript=1` +
                                   `&_ak=${ak}`;
@@ -809,7 +815,7 @@ export default function FilterModal({ filterId, onClose }) {
                                 `&show_text=false` +
                                 `&height=540` +
                                 `&autoplay=1` +
-                                `&mute=${muted ? 1 : 0}` +
+                                `&mute=1` +
                                 `&allowfullscreen=true` +
                                 `&t=0` +
                                 `&_ak=${ak}`;
