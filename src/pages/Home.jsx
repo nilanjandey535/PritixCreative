@@ -9,7 +9,7 @@ import ClientTestimonials from '../components/ClientTestimonials.jsx';
 import StatsSection from '../components/StatsSection.jsx';
 import WhatWeDo from '../components/WhatWeDo.jsx';
 
-import natureBg from '../assets/nature.jpg';
+import natureBg from '../assets/CTA.png';
 
 const HEADER_OFFSET = 72;
 

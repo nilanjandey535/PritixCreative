@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import FilterModal from './FilterModal.jsx';
 
 import heroImg from '../assets/brand.jpeg';
-import festival from '../assets/photo.jpeg';
+import festival from '../assets/photo.JPG';
 import video from '../assets/other.jpeg';
-import brand from '../assets/brand.jpg';
+import brand from '../assets/brand.png';
 
 const LABEL_FROM_ID = {
   photography: '',
