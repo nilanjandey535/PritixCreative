@@ -20,24 +20,28 @@ const CATEGORIES = [
     id: 'photography',
     cta: 'Explore Photography',
     hero: festival,
+    alt: 'Creative photography and visual content by Pritix Creative',
     tint: 'from-primary/40',
   },
   {
     id: 'social-media',
     cta: 'Explore Videos',
     hero: video,
+    alt: 'Social media video content and creative production by Pritix Creative',
     tint: 'from-primary-fixed-dim/30',
   },
   {
     id: 'brand-design',
     cta: 'Brand',
     hero: brand,
+    alt: 'Brand identity and graphic design work by Pritix Creative',
     tint: 'from-secondary/40',
   },
   {
     id: 'other',
     cta: 'Other',
     hero: heroImg,
+    alt: 'Creative production work by Pritix Creative in Diamond Harbour and Kolkata',
     tint: 'from-gold-accent/30',
   },
 ];

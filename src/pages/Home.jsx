@@ -184,7 +184,7 @@ export default function Home() {
             {/* Top eyebrow chip */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/12 bg-inverse-surface/60 backdrop-blur-md mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              <span className="font-sans-premium text-[9px] uppercase tracking-[0.3em] text-primary-fixed-dim">
+              <span className="font-sans-premium text-[14px] uppercase tracking-[0.3em] text-primary-fixed-dim">
                 Why Pritix?
               </span>
             </div>
@@ -200,7 +200,8 @@ export default function Home() {
             <p className="font-sans-premium text-base md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-4 leading-relaxed">
               Because your audience does&apos;t see your hard work first.
               They see your brand.
-              That&apos;s why we focus on every detail - from the first visual to the final impression.
+              That&apos;s why we bring digital marketing, UGC and creative production together
+              for brands to stand out across Diamond Harbour, Kolkata, West Bengal and India.
             </p>
 
             {/* Buttons */}
