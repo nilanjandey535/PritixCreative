@@ -1122,7 +1122,7 @@ export default function FilterModal({ filterId, onClose }) {
               onClick={goContact}
               className="group inline-flex items-center gap-3 px-7 py-3 bg-primary text-white font-sans-premium text-sm uppercase tracking-[0.18em] font-medium hover:shadow-[0_10px_40px_rgba(95,46,255,0.45)] transition-all duration-500"
             >
-              <span className="relative z-10">Back to Stories</span>
+              <span className="relative z-10">Contact Us</span>
               <span className="material-symbols-outlined text-lg relative z-10 transform transition-transform duration-300 group-hover:translate-x-1" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400" }}>
                 arrow_forward
               </span>
